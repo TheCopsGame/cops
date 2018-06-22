@@ -3,6 +3,7 @@ ENV['RAILS_ENV'] ||= 'test'
 if ENV['coverage'] == 'on'
   require 'simplecov'
   require 'codecov'
+
   SimpleCov.start('rails') do
     add_filter 'enumerators'
     add_filter 'spec'
