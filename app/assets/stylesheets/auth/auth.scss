@@ -1,0 +1,21 @@
+.ui.header > .logo {
+  margin-top: 2em;
+  margin-bottom: 0em;
+  font-size: 6em;
+}
+
+.ui.large.green.button {
+  margin-top: 1em;
+}
+
+.ui.large.green.button > .add.user.icon {
+  margin-left: 2px;
+  margin-right: -2px;
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.header > .logo {
+    margin-top: 1.5em;
+    font-size: 3em;
+  }
+}

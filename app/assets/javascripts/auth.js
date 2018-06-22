@@ -3,4 +3,4 @@
 //= require rails-ujs
 //= require activestorage
 //= require semantic-ui
-//= require_tree ./application
+//= require_tree ./auth
