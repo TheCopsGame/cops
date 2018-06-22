@@ -8,6 +8,9 @@ if ENV['coverage'] == 'on'
     add_filter 'initializers'
     add_filter 'app/channels'
     add_filter 'app/views'
+    add_filter 'app/jobs/application_job.rb'
+    add_filter 'app/mailers/application_mailer.rb'
+    add_filter 'app/models/application_record.rb'
     minimum_coverage 100
   end
 end
