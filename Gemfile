@@ -45,6 +45,7 @@ end
 
 group :test do
   gem 'capybara',                 '>= 2.15', '< 4.0'
+  gem 'codecov',                  '0.1.10', require: false
   gem 'database_cleaner',         '>= 1.6.2'
   gem 'rails-controller-testing', '~> 1.0.2'
   gem 'selenium-webdriver',       '~> 3.11'

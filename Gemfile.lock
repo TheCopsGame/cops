@@ -79,6 +79,10 @@ GEM
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     cocoon (1.2.11)
+    codecov (0.1.10)
+      json
+      simplecov
+      url
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -272,6 +276,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.4.0)
     uniform_notifier (1.11.0)
+    url (0.3.2)
     vcr (4.0.0)
     web-console (3.6.2)
       actionview (>= 5.0)
@@ -300,6 +305,7 @@ DEPENDENCIES
   byebug (~> 10.0)
   capybara (>= 2.15, < 4.0)
   cocoon (~> 1.2.11)
+  codecov (= 0.1.10)
   coffee-rails (~> 4.2)
   database_cleaner (>= 1.6.2)
   enumerated_type (~> 0.5.0)

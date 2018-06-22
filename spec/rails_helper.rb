@@ -2,6 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 
 if ENV['coverage'] == 'on'
   require 'simplecov'
+  require 'codecov'
   SimpleCov.start('rails') do
     add_filter 'enumerators'
     add_filter 'spec'
@@ -13,6 +14,7 @@ if ENV['coverage'] == 'on'
     add_filter 'app/models/application_record.rb'
     minimum_coverage 100
   end
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov if ENV['ci'] == 'true'
 end
 
 require File.expand_path('../../config/environment', __FILE__)
