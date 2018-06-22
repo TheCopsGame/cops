@@ -7,6 +7,7 @@ gem 'bootsnap',           '>= 1.1.0', require: false
 gem 'bootstrap-sass',     '~> 3.3.7'
 gem 'cocoon',             '~> 1.2.11'
 gem 'coffee-rails',       '~> 4.2'
+gem 'devise',             '~> 4.4.3'
 gem 'enumerated_type',    '~> 0.5.0'
 gem 'font-awesome-rails', '~> 4.7.0'
 gem 'gretel',             '~> 3.0.9'
