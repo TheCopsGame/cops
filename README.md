@@ -1,4 +1,8 @@
 # The Cops
+
+[ ![Codeship Status for TheCopsGame/cops](https://app.codeship.com/projects/f8df0c60-57f2-0136-f9f7-2a6a4a026a5c/status?branch=master)](https://app.codeship.com/projects/295057)
+[![codecov](https://codecov.io/gh/TheCopsGame/cops/branch/master/graph/badge.svg)](https://codecov.io/gh/TheCopsGame/cops)
+
 Online RPG where you start as a rookie police officer and try to make it to the top
 
 #### Setup
