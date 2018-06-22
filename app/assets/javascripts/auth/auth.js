@@ -3,5 +3,5 @@ function setHeaderHeight() {
   $('#header').css('height', windowHeight + 'px')
 }
 
-$(window).resize(() => { setHeaderHeight() })
-$(document).ready(() => { setHeaderHeight() })
+$(window).resize(function() { setHeaderHeight() })
+$(document).ready(function() { setHeaderHeight() })
