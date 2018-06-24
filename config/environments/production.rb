@@ -65,7 +65,7 @@ Rails.application.configure do
 
   # ActionMailer
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: ENV['DEFAULT_URL'] }
+  config.action_mailer.default_url_options = { host: ENV['DEFAULT_URL'] || "#{ENV['HEROKU_APP_NAME']}.herokuapp.com" }
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {

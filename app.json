@@ -7,6 +7,21 @@
   "env": {
     "DEVISE_EMAIL_SENDER": {
       "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "MAILGUN_USERNAME": {
+      "required": true
+    },
+    "MAILGUN_PASSWORD": {
+      "required": true
+    },
+    "MAILGUN_DOMAIN": {
+      "required": true
+    },
+    "MAILGUN_HOSTNAME": {
+      "required": true
     }
   },
   "formation": {},
