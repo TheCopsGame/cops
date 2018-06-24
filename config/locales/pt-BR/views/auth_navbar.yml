@@ -1,0 +1,5 @@
+pt-BR:
+  shared:
+    auth_navbar:
+      home: Início
+      log_in: Entrar
