@@ -4,7 +4,8 @@ puts 'Creating users...'
   User.create!(
     username: "user#{i}",
     email: "user#{i}@tester.com",
-    password: 'thecops'
+    password: 'thecops',
+    confirmed_at: Time.current
   )
 end
 
