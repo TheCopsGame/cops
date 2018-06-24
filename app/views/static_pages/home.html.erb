@@ -1,9 +1,9 @@
 <div id='header' class='ui inverted vertical center aligned segment'>
   <div class='ui container'>
     <div class='ui large secondary inverted pointing menu'>
-      <%= link_to 'Home', home_path, class: 'active item' %>
+      <%= link_to t("general.app_name"), home_path, class: 'active item' %>
       <div class='right item'>
-        <a class='ui inverted button'>Log in</a>
+        <a class='ui inverted button'><%= t("general.log_in") %></a>
       </div>
     </div>
   </div>
@@ -11,7 +11,7 @@
     <div class='ui header'>
       <%= image_tag('logo-white', class: 'logo') %>
     </div>
-    <h3>The Cops is an free-to-play RPG game where you start as a rookie police officer and try to make it to the top.</h3>
-    <div class='ui large green button'>Create a new account <i class='add user icon'></i></div>
+    <h3><%= t(".explanation") %></h3>
+    <div class='ui large green button'><%= t("general.create_account") %><i class='add user icon'></i></div>
   </div>
 </div>
