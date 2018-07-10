@@ -1,0 +1,17 @@
+<div class="ui stackable centered grid">
+  <div class="five wide column">
+    <h3 class="ui center aligned inverted header"><%= t('.header') %></h3>
+    <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post, class: 'ui inverted form' }) do |f| %>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), required: true %>
+      </div>
+      <div class="field">
+        <%= f.submit t('.resend'), class: 'ui fluid submit green button' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="devise-links">
+  <%= render 'devise/shared/links' %>
+</div>

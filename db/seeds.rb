@@ -2,8 +2,10 @@ puts 'Creating users...'
 
 5.times do |i|
   User.create!(
-    email: "user_#{i}@tester.com",
-    password: 'thecops'
+    username: "user#{i}",
+    email: "user#{i}@tester.com",
+    password: 'thecops',
+    confirmed_at: Time.current
   )
 end
 

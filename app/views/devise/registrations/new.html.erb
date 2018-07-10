@@ -1,0 +1,30 @@
+<div class="ui stackable centered grid">
+  <div class="five wide column">
+    <h3 class="ui center aligned inverted header"><%= t('.header') %></h3>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'ui inverted form' }) do |f| %>
+      <%= render 'shared/error_messages', object: resource %>
+      <div class="required field">
+        <%= f.label :username %>
+        <%= f.text_field :username, autofocus: true, required: true %>
+      </div>
+      <div class="required field">
+        <%= f.label :email %>
+        <%= f.email_field :email, required: true %>
+      </div>
+      <div class="required field">
+        <%= f.label :password %> (<%= @minimum_password_length %> min.)
+        <%= f.password_field :password, autocomplete: 'off', required: true %>
+      </div>
+      <div class="required field">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: 'off', required: true %>
+      </div>
+      <div class="field">
+        <%= f.submit t('.sign_up'), class: 'ui fluid submit green button' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="devise-links">
+  <%= render 'devise/shared/links' %>
+</div>
