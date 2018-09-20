@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'aws-sdk-s3',         '~> 1.20.0'
 gem 'bootsnap',           '>= 1.1.0', require: false
 gem 'bootstrap-sass',     '~> 3.3.7'
 gem 'cocoon',             '~> 1.2.11'
