@@ -1,0 +1,17 @@
+pt-BR:
+  activerecord:
+    models:
+      character:
+        one: Personagem
+        other: Personagens
+    attributes:
+      character:
+        name: Nome
+        level: Nível
+        experience: Experiência
+        energy: Energia
+        money: Dinheiro
+        strength: Força
+        agility: Agilidade
+        intelligence: Inteligência
+        user: Usuário
