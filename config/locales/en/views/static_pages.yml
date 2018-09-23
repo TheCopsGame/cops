@@ -1,5 +1,7 @@
 en:
   static_pages:
     home:
-      explanation: 'The Cops is an free-to-play RPG game where you start as a rookie police officer and try to make it to the top.'
-      create_account: Create new account
+      explanation: "The Cops is an free-to-play RPG game where you start as a rookie police officer and try to make it to the top."
+      create_account: "Create new account"
+    dashboard:
+      welcome: "Welcome, %{username}"
