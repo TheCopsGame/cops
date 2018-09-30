@@ -1,0 +1,18 @@
+<div class="ui stackable centered grid">
+  <div class="ten wide column">
+    <h3 class="ui center aligned header"><%= t('.header') %></h3>
+    <div class="ui relaxed divided list">
+      <% @characters.each do |character| %>
+        <%= link_to(character_path(character), class: 'item') do %>
+          <% if character.avatar.attached? %>
+            <%= image_tag(character.avatar, class: 'ui avatar image') %>
+          <% end %>
+          <div class="content">
+            <div class="header"><%= character.name %></div>
+            <div class="description"><%= t('.level') %><%= character.level %></div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
