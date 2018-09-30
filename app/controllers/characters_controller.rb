@@ -5,7 +5,7 @@ class CharactersController < ApplicationController
   before_action :set_character, only: [:destroy, :edit, :new, :update]
 
   def index
-    @characters = Character.all
+    @characters = Character.with_attached_avatar
   end
 
   def show
