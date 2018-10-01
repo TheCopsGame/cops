@@ -1,7 +1,12 @@
 @import 'dashboard';
 @import 'characters-list';
 @import 'character-form';
+@import 'user-form';
 
 .ui.center.aligned.header {
   margin-top: 3em;
+}
+
+.ui.vertical.center.aligned.segment {
+  border-bottom: none;
 }

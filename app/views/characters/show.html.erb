@@ -19,13 +19,9 @@
         </div>
       </div>
     </div>
+    <% if @character.user == current_user %>
+      <%= link_to t('.edit'), edit_character_path(@character), class: 'ui fluid inverted green button' %>
+    <% end %>
+    <%= link_to t('.back'), characters_path, class: 'ui fluid basic button' %>
   </div>
-</div>
-<% if @character.user == current_user %>
-  <div class="row">
-    <%= link_to t('.edit'), edit_character_path(@character), class: 'ui inverted green button' %>
-  </div>
-<% end %>
-<div class="row">
-  <%= link_to t('.back'), characters_path, class: 'ui basic button' %>
 </div>
