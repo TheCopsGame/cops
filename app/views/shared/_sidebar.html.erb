@@ -1,0 +1,43 @@
+<div id="sidebar" class="ui left visible sidebar inverted vertical menu">
+  <a class="item">
+    <%= image_tag('logo-white', class: 'logo') %>
+  </a>
+  <a class="item">
+    <%= t('.shooting_range') %>
+  </a>
+  <a class="item">
+    <%= t('.gym') %>
+  </a>
+  <a class="item">
+    <%= t('.library') %>
+  </a>
+  <a class="item">
+    <%= t('.cafeteria') %>
+  </a>
+  <a class="item">
+    <%= t('.missions') %>
+  </a>
+  <a class="item">
+    <%= t('.work') %>
+  </a>
+  <% if current_character %>
+    <div class="item">
+      <%= t('.profile') %>
+      <div class="profile menu">
+        <%= link_to t('.edit_character'), edit_character_path(current_character), class: 'item', title: t('.edit_character') %>
+        <%= link_to t('.edit_account'), edit_user_registration_path, class: 'item', title: t('.edit_user') %>
+        <%= link_to destroy_user_session_path, method: :delete, class: 'item', title: t('.logout') do %>
+          <%= t('.logout') %>
+          <i class="white sign out icon"></i>
+        <% end %>
+      </div>
+    </div>
+  <% else %>
+    <div class="menu">
+      <%= link_to destroy_user_session_path, method: :delete, class: 'item', title: t('.logout') do %>
+        <%= t('.logout') %>
+        <i class="white sign out icon"></i>
+      <% end %>
+    </div>
+  <% end %>
+</div>

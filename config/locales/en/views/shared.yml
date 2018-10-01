@@ -1,0 +1,13 @@
+en:
+  shared:
+    sidebar:
+      shooting_range: Shooting Range
+      gym: Gyn
+      library: Library
+      cafeteria: Cafeteria
+      missions: Missions
+      work: Work
+      profile: Profile
+      edit_character: Edit character
+      edit_account: Edit account
+      logout: Log out
