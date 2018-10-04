@@ -11,3 +11,11 @@ en:
       edit_character: Edit character
       edit_account: Edit account
       logout: Log out
+      name: Name
+      level: Level
+      experience: Experience
+      energy: Energy
+      money: Money
+      strength: Strength
+      agility: Agility
+      intelligence: Intelligence

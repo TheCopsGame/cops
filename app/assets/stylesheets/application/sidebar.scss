@@ -2,6 +2,24 @@
   .item {
     margin: 0 auto;
 
+    .ui.character.avatar.image {
+      width: 3em;
+      height: 3em;
+    }
+
+    .label.energy {
+      font-weight: normal;
+      color: white;
+    }
+
+    .row.character-stats {
+      margin-bottom: 0.3em;
+    }
+
+    .character-energy {
+      margin-top: 0;
+    }
+
     .logo {
       width: 120px;
       margin: 0 auto;
