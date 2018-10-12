@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  layout 'auth'
-
   def home; end
+
+  def dashboard; end
 end

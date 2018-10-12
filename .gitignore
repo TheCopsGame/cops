@@ -15,3 +15,4 @@
 .idea/*
 spec/examples.txt
 /config/application.yml
+storage/

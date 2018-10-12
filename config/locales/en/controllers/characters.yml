@@ -1,0 +1,10 @@
+en:
+  characters:
+    create:
+      success: "Character successfully created"
+    destroy:
+      success: "Character successfully destroyed"
+    new:
+      character_already_exists: "You already have a character"
+    update:
+      success: "Character successfully updated"

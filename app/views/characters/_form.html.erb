@@ -1,0 +1,14 @@
+<%= form_for @character, html: { multipart: true, class: 'ui form' } do |f| %>
+  <%= render 'shared/error_messages', object: @character %>
+  <div class="required field">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="actions">
+    <%= f.submit t('.submit'), class: 'ui fluid green button' %>
+  </div>
+<% end %>
