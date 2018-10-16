@@ -16,6 +16,9 @@ module Cops
 
     private_class_method :new
 
+    attr_reader :item, :cost_attrs, :gain_attrs
+    attr_accessor :character
+
     def self.call(character:, item:, cost_attrs: {}, gain_attrs: {})
       new(character, item, cost_attrs, gain_attrs).call
     end
@@ -27,17 +30,14 @@ module Cops
       @gain_attrs = gain_attrs
     end
 
-    private
-
-    attr_reader :item, :cost_attrs, :gain_attrs
-    attr_accessor :character
-
     def call
       raise InvalidParamsError unless valid_params?
       raise InsufficientFundsError unless character_has_sufficient_funds?
 
       update_character_attributes!
     end
+
+    private
 
     def valid_params?
       [:character, :item, :cost_attrs, :gain_attrs].map do |param|
@@ -53,7 +53,11 @@ module Cops
 
     def update_character_attributes!
       gain_attrs.each do |enum_option, char_attribute|
-        character.increment(char_attribute, by: item.send(enum_option))
+        character.increment(char_attribute, item.send(enum_option))
+      end
+
+      cost_attrs.each do |enum_option, char_attribute|
+        character.decrement(char_attribute, item.send(enum_option))
       end
 
       raise CharacterValidationError unless character.valid?
