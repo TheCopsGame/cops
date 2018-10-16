@@ -31,4 +31,9 @@ class ApplicationController < ActionController::Base
 
     @current_character ||= character&.persisted? ? character : nil
   end
+
+  def redirect_with_message(path:, kind:, message:)
+    flash[kind] = message
+    redirect_to path
+  end
 end

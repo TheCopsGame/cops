@@ -1,0 +1,13 @@
+pt-BR:
+  enum:
+    snack_kind:
+      sandwich: Sanduiche
+      soda: Refrigerante
+      pizza: Pizza
+      candy_bar: Barra de chocolate
+      pancake: Panqueca
+      cookie: Cookie
+      coffee: Café
+      steak: Carne
+      juice: Suco
+      milkshake: Milkshake

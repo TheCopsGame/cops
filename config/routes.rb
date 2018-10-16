@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get 'home', to: 'static_pages#home'
-  get 'dashboard', to: 'static_pages#dashboard'
-  get 'gym', to: 'gym#index'
-  post 'train', to: 'gym#train'
+  get  'home',           to: 'static_pages#home'
+  get  'dashboard',      to: 'static_pages#dashboard'
+  get  'cafeteria',      to: 'cafeteria#index'
+  post 'purchase_snack', to: 'cafeteria#purchase_snack'
+  get  'gym',            to: 'gym#index'
+  post 'train',          to: 'gym#train'
+
   resources :characters
 
   devise_scope :user do
