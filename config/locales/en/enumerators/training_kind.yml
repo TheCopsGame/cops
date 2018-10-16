@@ -1,0 +1,5 @@
+pt-BR:
+  enum:
+    training_kind:
+      running: Running
+      weightlifting: Weightlifting
