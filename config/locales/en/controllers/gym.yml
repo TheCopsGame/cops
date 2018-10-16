@@ -10,3 +10,8 @@ en:
       running_cost: "-5% energy"
       running_description: "Looking forward to increase your physical conditioning? Run to gain agility points"
       train: "Train!"
+    train:
+      success: "Yeah! You are feeling awesome!"
+      invalid_params: "Something went wrong. Please try again"
+      insufficient_energy: "You don't have the required energy. Go to the cafeteria and buy something"
+      invalid_character: "Something went wrong. Please try again"

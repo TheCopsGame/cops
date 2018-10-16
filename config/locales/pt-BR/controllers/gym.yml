@@ -10,3 +10,8 @@ pt-BR:
       running_cost: "-5% de energia"
       running_description: "Quer ganhar condicionamento físico? Corra para ganhar pontos de agilidade"
       train: "Treinar!"
+    train:
+      success: "Show! Você está se sentindo incrível!"
+      invalid_params: "Alguma coisa deu errado. Por favor, tente novamente"
+      insufficient_energy: "Você não tem energia suficiente. Vá até a lanchonete e compre alguma coisa"
+      invalid_character: "Alguma coisa deu errado. Por favor, tente novamente"
