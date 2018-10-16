@@ -1,0 +1,22 @@
+<div class="ui stackable centered grid">
+  <div class="ten wide column center aligned">
+    <!-- Header -->
+    <h2 class="ui icon header">
+      <i class="shopping basket icon"></i>
+      <div class="content">
+        <%= t('.header') %>&nbsp;
+        <div class="ui breadcrumb">
+          [
+            <%= link_to t('shared.home'), authenticated_root_path, class: 'section' %>
+            <span class="divider">/</span>
+            <div class="active section"><%= t('.header') %></div>
+          ]
+        </div>
+        <div class="sub header"><%= t('.subheader') %></div>
+      </div>
+    </h2>
+
+    <!-- Content -->
+
+  </div>
+</div>
