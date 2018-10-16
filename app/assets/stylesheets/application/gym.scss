@@ -1,0 +1,28 @@
+.ui.segment.gym {
+  margin: 1em;
+
+  .description {
+    font-size: 1.25rem;
+  }
+
+  .ui.center.aligned.gym.grid {
+    margin-top: 3em;
+
+    .ui.divided.items {
+      .item {
+        .ui.image {
+          img {
+            width: 120px;
+            height: 120px;
+          }
+        }
+
+        .content {
+          .train.button {
+            margin-top: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}
