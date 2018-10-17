@@ -12,8 +12,6 @@ module Cops
     # cost_attrs: hash element where key = enum, value = character attribute to compare with
     # gain_attrs: hash element where key = enum, value = character attribute to increment
 
-    # TODO: create specs
-
     private_class_method :new
 
     attr_reader :item, :cost_attrs, :gain_attrs
