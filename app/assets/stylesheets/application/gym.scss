@@ -1,4 +1,4 @@
-.ui.segment.gym {
+.ui.stackable.center.aligned.gym.container {
   margin: 1em;
 
   .description {
@@ -21,6 +21,10 @@
           .train.button {
             margin-top: 0.8em;
           }
+        }
+
+        .description {
+          font-size: 1rem;
         }
       }
     }

@@ -1,50 +1,48 @@
-<div class="ui stackable center aligned container">
-  <div class="ui segment gym">
-    <h2 class="ui header white">
-      <%= t('.header') %>
-    </h2>
-    <p class="description">
-      <%= t('.description') %>
-    </p>
-    <div class="ui center aligned gym grid">
-      <div class="ten wide column">
-        <div class="ui divided items">
-          <div class="item">
-            <div class="ui image">
-              <%= image_tag('dumbell.png') %>
+<div class="ui stackable center aligned gym container">
+  <h2 class="ui header white">
+    <%= t('.header') %>
+  </h2>
+  <p class="description">
+    <%= t('.description') %>
+  </p>
+  <div class="ui center aligned gym grid">
+    <div class="ten wide column">
+      <div class="ui divided items">
+        <div class="item">
+          <div class="ui image">
+            <%= image_tag('dumbell.png') %>
+          </div>
+          <div class="content">
+            <div class="header">
+              <%= t('.weightlifting_title') %>
             </div>
-            <div class="content">
-              <div class="header">
-                <%= t('.weightlifting_title') %>
-              </div>
-              <div class="extra">
-                <%= t('.weightlifting_cost') %>
-              </div>
-              <div class="description">
-                <p>
-                  <%= t('.weightlifting_description') %>
-                </p>
-                <%= link_to t('.train'), train_path(training_kind: :weightlifting), method: :post, class: 'ui mini inverted green train button' %>
-              </div>
+            <div class="extra">
+              <%= t('.weightlifting_cost') %>
+            </div>
+            <div class="description">
+              <p>
+                <%= t('.weightlifting_description') %>
+              </p>
+              <%= link_to t('.train'), train_path(training_kind: :weightlifting), method: :post, class: 'ui mini inverted green train button' %>
             </div>
           </div>
-          <div class="item">
-            <div class="ui image">
-              <%= image_tag('walking.png') %>
+        </div>
+        <div class="item">
+          <div class="ui image">
+            <%= image_tag('walking.png') %>
+          </div>
+          <div class="content">
+            <div class="header">
+              <%= t('.running_title') %>
             </div>
-            <div class="content">
-              <div class="header">
-                <%= t('.running_title') %>
-              </div>
-              <div class="extra">
-                <%= t('.running_cost') %>
-              </div>
-              <div class="description">
-                <p>
-                  <%= t('.running_description') %>
-                </p>
-                <%= link_to t('.train'), train_path(training_kind: :running), method: :post, class: 'ui mini inverted green train button' %>
-              </div>
+            <div class="extra">
+              <%= t('.running_cost') %>
+            </div>
+            <div class="description">
+              <p>
+                <%= t('.running_description') %>
+              </p>
+              <%= link_to t('.train'), train_path(training_kind: :running), method: :post, class: 'ui mini inverted green train button' %>
             </div>
           </div>
         </div>
