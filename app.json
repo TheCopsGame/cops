@@ -5,6 +5,12 @@
     "postdeploy": "bundle exec rake db:schema:load db:seed"
   },
   "env": {
+    "AWS_BUCKET": {
+      "required": true
+    },
+    "AWS_REGION": {
+      "required": true
+    },
     "DEVISE_EMAIL_SENDER": {
       "required": true
     },
@@ -22,10 +28,26 @@
     },
     "MAILGUN_HOSTNAME": {
       "required": true
+    },
+    "MALLOC_ARENA_MAX": {
+      "required": true
+    },
+    "RAILS_MASTER_KEY": {
+      "required": true
     }
   },
-  "formation": {},
-  "addons": [],
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
   "buildpacks": [
     {
       "url": "heroku/ruby"
