@@ -21,6 +21,7 @@ gem 'rails',              '~> 5.2.0'
 gem 'redis-namespace',    '~> 1.6.0'
 gem 'sass-rails',         '~> 5.0'
 gem 'semantic-ui-sass',   '~> 2.3.1'
+gem 'sidekiq',            '~> 5.2.2'
 gem 'simple_form',        '~> 4.0.0'
 gem 'sprockets-es6',      '~> 0.9.2', require: 'sprockets/es6'
 gem 'tzinfo-data',        '~> 1.2.5', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
