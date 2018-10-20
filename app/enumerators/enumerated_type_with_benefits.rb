@@ -132,5 +132,17 @@ module EnumeratedTypeWithBenefits
     def form_option
       [label, reference.to_s]
     end
+
+    def character_properties
+      %i(experience energy money strength agility intelligence)
+    end
+
+    def cost_properties
+      character_properties.map { |property| property if send(property).try(:negative?) }.compact
+    end
+
+    def gain_properties
+      character_properties.map { |property| property if send(property).try(:positive?) }.compact
+    end
   end
 end
