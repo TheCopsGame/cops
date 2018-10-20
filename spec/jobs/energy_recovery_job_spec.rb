@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe EnergyRecoveryWorker, type: :worker do
+RSpec.describe EnergyRecoveryJob, type: :job do
   describe '#perform' do
     subject { described_class.new.perform }
 
@@ -17,7 +17,7 @@ RSpec.describe EnergyRecoveryWorker, type: :worker do
       it 'schedules the worker to perform again in 15 seconds' do
         expect do
           subject
-        end.to change(EnergyRecoveryWorker.jobs, :size).by(1)
+        end.to have_enqueued_job
       end
     end
 
@@ -34,7 +34,7 @@ RSpec.describe EnergyRecoveryWorker, type: :worker do
       it 'schedules the worker to perform again in 15 seconds' do
         expect do
           subject
-        end.to change(EnergyRecoveryWorker.jobs, :size).by(1)
+        end.to have_enqueued_job
       end
     end
   end
