@@ -4,19 +4,20 @@
     <h2 class="ui icon header">
       <i class="shopping basket icon"></i>
       <div class="content">
-        <%= t('.header') %>&nbsp;
-        <div class="ui breadcrumb">
-          [
-            <%= link_to t('shared.home'), authenticated_root_path, class: 'section' %>
-            <span class="divider">/</span>
-            <div class="active section"><%= t('.header') %></div>
-          ]
-        </div>
+        <%= t('.header') %>
         <div class="sub header"><%= t('.subheader') %></div>
       </div>
     </h2>
 
     <!-- Content -->
-
+    <div class="ui center aligned inventory stackable grid">
+      <div class="sixteen wide column">
+        <div class="ui divided items">
+          <% SnackKind.each do |snack| %>
+            <%= render 'snack_item', snack: snack %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

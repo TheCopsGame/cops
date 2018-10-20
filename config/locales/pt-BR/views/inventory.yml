@@ -1,0 +1,9 @@
+pt-BR:
+  inventory:
+    labels:
+      experience: '%{qualifier}%{value} de experiência'
+      energy: '%{qualifier}%{value}% de energia'
+      money: '%{qualifier}$%{value}'
+      strength: '%{qualifier}%{value} de força'
+      agility: '%{qualifier}%{value} de agilidade'
+      intelligence: '%{qualifier}%{value} de inteligência'
