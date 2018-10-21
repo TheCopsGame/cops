@@ -1,12 +1,12 @@
 class GymController < ApplicationController
+  before_action :authenticate_user!
+
   def index; end
 
   def train
     Cops::TrainingManager.call(
       character: current_character,
-      item: TrainingKind.coerce(params[:training_kind]),
-      cost_attrs: { cost: :energy },
-      gain_attrs: { strength: :strength, agility: :agility }
+      item: TrainingKind.coerce(params[:training_kind])
     )
 
     redirect_with_message(path: gym_path, kind: :notice, message: t('.success'))

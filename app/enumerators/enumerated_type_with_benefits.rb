@@ -134,7 +134,7 @@ module EnumeratedTypeWithBenefits
     end
 
     def character_properties
-      %i(experience energy money strength agility intelligence)
+      [:experience, :energy, :money, :strength, :agility, :intelligence]
     end
 
     def cost_properties
