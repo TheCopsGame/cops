@@ -1,0 +1,17 @@
+.ui.center.aligned.inventory.stackable.grid {
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  .sixteen.wide.column {
+    .ui.divided.items {
+      .ui.center.aligned.middle.aligned.item.grid {
+        .ui.image {
+          img {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}

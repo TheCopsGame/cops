@@ -1,18 +1,22 @@
 <div id="sidebar" class="ui left visible sidebar inverted vertical menu">
-  <a class="item">
+  <%= link_to authenticated_root_path, class: 'item' do %>
     <%= image_tag('logo-white.png', class: 'logo') %>
-  </a>
+  <% end %>
+
+  <%=
+    link_to t('.cafeteria'),
+            cafeteria_path,
+            class: "item #{'active' if controller_path == 'cafeteria'}"
+  %>
+
   <a class="item">
     <%= t('.shooting_range') %>
   </a>
-  <a class="item">
-    <%= t('.gym') %>
-  </a>
+  <%= link_to t('.gym'),
+              gym_path,
+              class: "item #{'active' if controller_path == 'gym'}" %>
   <a class="item">
     <%= t('.library') %>
-  </a>
-  <a class="item">
-    <%= t('.cafeteria') %>
   </a>
   <a class="item">
     <%= t('.missions') %>

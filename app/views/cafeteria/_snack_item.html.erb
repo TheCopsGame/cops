@@ -1,0 +1,50 @@
+<div class="ui center aligned middle aligned item grid">
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <div class="ui image">
+      <%= image_tag(snack.image) %>
+    </div>
+  </div>
+
+  <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
+    <div class="content">
+      <div class="header">
+        <h2><%= snack.label %></h2>
+      </div>
+
+      <!-- Cost properties -->
+      <div class="extra">
+        <i class="arrow circle down icon red"></i>
+        <div class="ui horizontal bulleted list">
+          <% snack.cost_properties.each do |cost_attribute| %>
+            <div class="item">
+              <%= t("inventory.labels.#{cost_attribute}", qualifier: '-', value: snack.send(cost_attribute).abs) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Gain properties -->
+      <div class="description">
+        <i class="arrow circle up icon green"></i>
+        <div class="ui horizontal bulleted list">
+          <% snack.gain_properties.each do |gain_attribute| %>
+            <div class="item">
+              <%= t("inventory.labels.#{gain_attribute}", qualifier: '+', value: snack.send(gain_attribute).abs) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <div class="description">
+      <%=
+        link_to t('general.actions.buy'),
+                purchase_snack_path(snack_kind: snack.name),
+                method: :post,
+                class: 'ui mini inverted green train button'
+      %>
+    </div>
+  </div>
+</div>
