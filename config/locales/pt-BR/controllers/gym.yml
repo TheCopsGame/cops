@@ -1,15 +1,5 @@
 pt-BR:
   gym:
-    index:
-      header: "Academia"
-      description: "É sempre bom estar em forma. Aqui você pode ganhar força e agilidade para encarar missões e trabalhos mais avançados."
-      weightlifting_title: "Musculação"
-      weightlifting_cost: "-5% de energia"
-      weightlifting_description: "Afim de ganhar músculo? Levante alguns pesos para ganhar pontos de força"
-      running_title: "Corrida"
-      running_cost: "-5% de energia"
-      running_description: "Quer ganhar condicionamento físico? Corra para ganhar pontos de agilidade"
-      train: "Treinar!"
     train:
       success: "Show! Você está se sentindo incrível!"
       invalid_params: "Alguma coisa deu errado. Por favor, tente novamente"

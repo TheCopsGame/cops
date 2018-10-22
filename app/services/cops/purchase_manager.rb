@@ -1,10 +1,9 @@
 module Cops
-  class PurchaseManager
+  class PurchaseManager < BaseManager
     class InsufficientFundsError < StandardError; end
 
     def call
       raise InsufficientFundsError unless character_has_required_attributes?
-
       super
     end
   end

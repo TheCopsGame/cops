@@ -1,6 +1,21 @@
 class TrainingKind
   include EnumeratedTypeWithBenefits
 
-  declare :running,       cost: 5, agility: 5, strength: 0
-  declare :weightlifting, cost: 5, agility: 0, strength: 5
+  declare :running,
+    experience: nil,
+    energy: -5,
+    money: nil,
+    strength: nil,
+    agility: 5,
+    intelligence: nil,
+    image: 'gym/running.png'
+
+  declare :weightlifting,
+    experience: nil,
+    energy: -5,
+    money: nil,
+    strength: 5,
+    agility: nil,
+    intelligence: nil,
+    image: 'gym/weightlifting.png'
 end

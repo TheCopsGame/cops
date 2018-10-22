@@ -1,15 +1,5 @@
 en:
   gym:
-    index:
-      header: "Gym"
-      description: "It's always good to be in shape. Here you can gain strength and agility to face more advanced missions and jobs."
-      weightlifting_title: "Weightlifting"
-      weightlifting_cost: "-5% energy"
-      weightlifting_description: "Wanna gain muscle? Lift some weight to gain strength points"
-      running_title: "Running"
-      running_cost: "-5% energy"
-      running_description: "Looking forward to increase your physical conditioning? Run to gain agility points"
-      train: "Train!"
     train:
       success: "Yeah! You are feeling awesome!"
       invalid_params: "Something went wrong. Please try again"

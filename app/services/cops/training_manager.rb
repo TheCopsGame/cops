@@ -4,7 +4,6 @@ module Cops
 
     def call
       raise InsufficientEnergyError unless character_has_required_attributes?
-
       super
     end
   end
