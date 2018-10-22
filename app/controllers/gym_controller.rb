@@ -1,6 +1,10 @@
 class GymController < ApplicationController
   before_action :authenticate_user!
 
+  rescue_from Cops::TrainingManager::InvalidParamsError, with: :invalid_params_handler
+  rescue_from Cops::TrainingManager::InsufficientEnergyError, with: :insufficient_energy_handler
+  rescue_from Cops::TrainingManager::CharacterValidationError, with: :character_validation_handler
+
   def index; end
 
   def train
@@ -10,11 +14,19 @@ class GymController < ApplicationController
     )
 
     redirect_with_message(path: gym_path, kind: :notice, message: t('.success'))
-  rescue Cops::TrainingManager::InvalidParamsError
+  end
+
+  private
+
+  def invalid_params_handler
     redirect_with_message(path: gym_path, kind: :alert, message: t('.invalid_params'))
-  rescue Cops::TrainingManager::InsufficientEnergyError
+  end
+
+  def insufficient_energy_handler
     redirect_with_message(path: gym_path, kind: :alert, message: t('.insufficient_energy'))
-  rescue Cops::TrainingManager::CharacterValidationError
+  end
+
+  def character_validation_handler
     redirect_with_message(path: gym_path, kind: :alert, message: t('.invalid_character'))
   end
 end
