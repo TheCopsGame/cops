@@ -1,6 +1,10 @@
 class CafeteriaController < ApplicationController
   before_action :authenticate_user!
 
+  rescue_from Cops::PurchaseManager::InvalidParamsError, with: :invalid_params_handler
+  rescue_from Cops::PurchaseManager::InsufficientFundsError, with: :insufficient_funds_handler
+  rescue_from Cops::PurchaseManager::CharacterValidationError, with: :character_validation_handler
+
   def index; end
 
   def purchase_snack
@@ -10,11 +14,19 @@ class CafeteriaController < ApplicationController
     )
 
     redirect_with_message(path: cafeteria_path, kind: :notice, message: t('.success'))
-  rescue Cops::PurchaseManager::InvalidParamsError
+  end
+
+  private
+
+  def invalid_params_handler
     redirect_with_message(path: cafeteria_path, kind: :alert, message: t('.invalid_params'))
-  rescue Cops::PurchaseManager::InsufficientFundsError
+  end
+
+  def insufficient_funds_handler
     redirect_with_message(path: cafeteria_path, kind: :alert, message: t('.insufficient_funds'))
-  rescue Cops::PurchaseManager::CharacterValidationError
+  end
+
+  def character_validation_handler
     redirect_with_message(path: cafeteria_path, kind: :alert, message: t('.invalid_character'))
   end
 end
