@@ -1,0 +1,19 @@
+pt-BR:
+  characters:
+    form:
+      submit: "Enviar"
+    new:
+      header: "Novo personagem"
+      back: "Voltar"
+    edit:
+      header: "Editar personagem"
+      back: "Voltar"
+    index:
+      header: "Personagens"
+      level: "Nível "
+    show:
+      header: "%{name}"
+      back: "Voltar"
+      level: "Nível: "
+      user: "Usuário: "
+      edit: "Editar"

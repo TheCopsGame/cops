@@ -1,0 +1,47 @@
+.ui.left.visible.sidebar.inverted.vertical.menu {
+  .item {
+    margin: 0 auto;
+
+    .ui.character.avatar.image {
+      width: 3em;
+      height: 3em;
+    }
+
+    .label.energy {
+      font-weight: normal;
+      color: white;
+    }
+
+    .row.character-stats {
+      margin-bottom: 0.3em;
+    }
+
+    .character-energy {
+      margin-top: 0;
+    }
+
+    .logo {
+      width: 120px;
+      margin: 0 auto;
+    }
+
+    .profile.menu {
+      margin: 0.6em 0.1em;
+
+      .item {
+        padding: 0.6em;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  .menu {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ui.left.visible.sidebar.inverted.vertical.menu {
+    display: none;
+  }
+}

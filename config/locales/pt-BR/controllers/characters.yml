@@ -1,0 +1,10 @@
+pt-BR:
+  characters:
+    create:
+      success: "Personagem criado com sucesso"
+    destroy:
+      success: "Personagem excluído com sucesso"
+    new:
+      character_already_exists: "Você já criou um personagem"
+    update:
+      success: "Personagem atualizado com sucesso"

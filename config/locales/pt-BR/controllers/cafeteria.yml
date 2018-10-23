@@ -1,0 +1,7 @@
+pt-BR:
+  cafeteria:
+    purchase_snack:
+      success: "Show! Você está se sentindo incrível!"
+      invalid_params: "Alguma coisa deu errado. Por favor, tente novamente. [parâmetros inválidos]"
+      insufficient_funds: "Você não tem dinheiro suficiente. Faça alguma missão/trabalho ou aguarde o próximo dia."
+      invalid_character: "Alguma coisa deu errado. Por favor, tente novamente. [personagem inválido]"

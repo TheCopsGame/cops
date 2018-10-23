@@ -3,11 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'aws-sdk-s3',         '~> 1.20.0'
 gem 'bootsnap',           '>= 1.1.0', require: false
 gem 'bootstrap-sass',     '~> 3.3.7'
 gem 'cocoon',             '~> 1.2.11'
 gem 'coffee-rails',       '~> 4.2'
+gem 'devise',             '~> 4.4.3'
 gem 'enumerated_type',    '~> 0.5.0'
+gem 'figaro',             '~> 1.1.1'
 gem 'font-awesome-rails', '~> 4.7.0'
 gem 'gretel',             '~> 3.0.9'
 gem 'jquery-rails',       '~> 4.3.3'
@@ -17,6 +20,8 @@ gem 'puma',               '~> 3.11'
 gem 'rails',              '~> 5.2.0'
 gem 'redis-namespace',    '~> 1.6.0'
 gem 'sass-rails',         '~> 5.0'
+gem 'semantic-ui-sass',   '~> 2.3.1'
+gem 'sidekiq',            '~> 5.2.2'
 gem 'simple_form',        '~> 4.0.0'
 gem 'sprockets-es6',      '~> 0.9.2', require: 'sprockets/es6'
 gem 'tzinfo-data',        '~> 1.2.5', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -36,6 +41,7 @@ group :development do
   gem 'better_errors',          '~> 2.4.0'
   gem 'binding_of_caller',      '~> 0.8.0'
   gem 'bullet',                 '~> 5.7.5'
+  gem 'letter_opener',          '~> 1.6.0'
   gem 'listen',                 '>= 3.0.5', '< 3.2'
   gem 'spring',                 '~> 2.0.2'
   gem 'spring-watcher-listen',  '~> 2.0.0'
@@ -44,6 +50,7 @@ end
 
 group :test do
   gem 'capybara',                 '>= 2.15', '< 4.0'
+  gem 'codecov',                  '0.1.10', require: false
   gem 'database_cleaner',         '>= 1.6.2'
   gem 'rails-controller-testing', '~> 1.0.2'
   gem 'selenium-webdriver',       '~> 3.11'

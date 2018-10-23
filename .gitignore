@@ -14,3 +14,5 @@
 .byebug_history
 .idea/*
 spec/examples.txt
+/config/application.yml
+storage/

@@ -30,10 +30,12 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
-  # Don't care if the mailer can't send.
+  # ActionMailer
   config.action_mailer.raise_delivery_errors = false
-
   config.action_mailer.perform_caching = false
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.perform_deliveries = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -64,8 +66,6 @@ Rails.application.configure do
     Bullet.bullet_logger = true
     Bullet.console = true
     Bullet.rails_logger = true
-    Bullet.alert = true
-    Bullet.honeybadger = true
-    Bullet.rollbar = true
+    Bullet.add_footer = true
   end
 end

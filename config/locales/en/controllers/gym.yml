@@ -1,0 +1,7 @@
+en:
+  gym:
+    train:
+      success: "Yeah! You are feeling awesome!"
+      invalid_params: "Something went wrong. Please try again"
+      insufficient_energy: "You don't have the required energy. Go to the cafeteria and buy something"
+      invalid_character: "Something went wrong. Please try again"

@@ -1,0 +1,6 @@
+pt-BR:
+  general:
+    app_name: "The Cops"
+    actions:
+      buy: "Comprar"
+      train: "Treinar"

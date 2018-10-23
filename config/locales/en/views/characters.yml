@@ -1,0 +1,19 @@
+en:
+  characters:
+    form:
+      submit: "Submit"
+    new:
+      header: "New character"
+      back: "Back"
+    edit:
+      header: "Edit character"
+      back: "Back"
+    index:
+      header: "Characters"
+      level: "Level "
+    show:
+      header: "%{name}"
+      back: "Back"
+      level: "Level: "
+      user: "User: "
+      edit: "Edit"

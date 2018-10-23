@@ -1,0 +1,16 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+    attributes:
+      user:
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação de senha
+        username: Nome de usuário
+        confirmed_at: Confirmado em
+        remember_me: Lembrar-me
+        reset_password_token: Token de redefinição de senha
+        character: Personagem

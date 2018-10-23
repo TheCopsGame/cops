@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t('general.app_name') %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <%= stylesheet_link_tag 'auth', media: 'all' %>
+    <%= javascript_include_tag 'auth' %>
+  </head>
+
+  <body>
+    <div id="header" class="ui inverted vertical center aligned segment">
+      <div class="ui container">
+        <%= render 'shared/auth_navbar' %>
+        <%= render 'shared/flash_messages' %>
+      </div>
+      <%= yield %>
+    </div>
+  </body>
+</html>

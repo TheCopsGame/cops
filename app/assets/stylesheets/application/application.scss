@@ -1,0 +1,28 @@
+@import 'characters-list';
+@import 'character-form';
+@import 'gym';
+@import 'user-form';
+@import 'sidebar';
+
+#header {
+  float: right;
+  width: calc(100% - 260px);
+}
+
+#sidebar {
+  float: left;
+}
+
+.ui.center.aligned.header {
+  margin-top: 3em;
+}
+
+.ui.vertical.center.aligned.segment {
+  border-bottom: none;
+}
+
+@media (max-width: 767px) {
+  #header {
+    width: 100%;
+  }
+}

@@ -1,0 +1,112 @@
+<div id="sidebar" class="ui left visible sidebar inverted vertical menu">
+  <%= link_to authenticated_root_path, class: 'item' do %>
+    <%= image_tag('logo-white.png', class: 'logo') %>
+  <% end %>
+
+  <%=
+    link_to t('.cafeteria'),
+            cafeteria_path,
+            class: "item #{'active' if controller_path == 'cafeteria'}"
+  %>
+
+  <a class="item">
+    <%= t('.shooting_range') %>
+  </a>
+  <%= link_to t('.gym'),
+              gym_path,
+              class: "item #{'active' if controller_path == 'gym'}" %>
+  <a class="item">
+    <%= t('.library') %>
+  </a>
+  <a class="item">
+    <%= t('.missions') %>
+  </a>
+  <a class="item">
+    <%= t('.work') %>
+  </a>
+  <% if current_character %>
+    <div class="item">
+      <%= t('.profile') %>
+      <div class="profile menu">
+        <%= link_to t('.edit_character'), edit_character_path(current_character), class: 'item', title: t('.edit_character') %>
+        <%= link_to t('.edit_account'), edit_user_registration_path, class: 'item', title: t('.edit_account') %>
+        <%= link_to destroy_user_session_path, method: :delete, class: 'item', title: t('.logout') do %>
+          <%= t('.logout') %>
+          <i class="white sign out icon"></i>
+        <% end %>
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui middle aligned two column divided grid">
+        <div class="row">
+          <% if current_character.avatar.attached? %>
+            <div class="column">
+              <%= image_tag(current_character.avatar, class: 'ui fluid rounded image') %>
+            </div>
+          <% end %>
+          <div class="column">
+            <div class="row character-stats">
+              <%= t('.name') %>:
+              <strong>
+                <%= current_character.name %>
+              </strong>
+            </div>
+            <div class="row character-stats">
+              <%= t('.level') %>:
+              <strong>
+                <%= current_character.level %>
+              </strong>
+            </div>
+            <div class="row character-stats">
+              <%= t('.experience') %>:
+              <strong>
+                <%= current_character.experience %>
+              </strong>
+            </div>
+            <div class="row character-stats">
+              <%= t('.money') %>:
+              <strong>
+                $<%= current_character.money %>
+              </strong>
+            </div>
+            <div class="row character-stats">
+              <%= t('.strength') %>:
+              <strong>
+                <%= current_character.strength %>
+              </strong>
+            </div>
+            <div class="row character-stats">
+              <%= t('.agility') %>:
+              <strong>
+                <%= current_character.agility %>
+              </strong>
+            </div>
+            <div class="row character-stats">
+              <%= t('.intelligence') %>:
+              <strong>
+                <%= current_character.intelligence %>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui grid character-energy">
+        <div class="row">
+          <div class="wide column">
+            <div class="ui teal progress">
+              <div class="bar" style="width: <%= current_character.energy %>%"></div>
+              <div class="label energy"><%= t('.energy') %>: <strong><%= current_character.energy %>%</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div class="menu">
+      <%= link_to destroy_user_session_path, method: :delete, class: 'item', title: t('.logout') do %>
+        <%= t('.logout') %>
+        <i class="white sign out icon"></i>
+      <% end %>
+    </div>
+  <% end %>
+</div>

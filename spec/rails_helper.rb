@@ -2,14 +2,21 @@ ENV['RAILS_ENV'] ||= 'test'
 
 if ENV['coverage'] == 'on'
   require 'simplecov'
+  require 'codecov'
+
   SimpleCov.start('rails') do
     add_filter 'enumerators'
     add_filter 'spec'
     add_filter 'initializers'
     add_filter 'app/channels'
     add_filter 'app/views'
+    add_filter 'app/jobs/application_job.rb'
+    add_filter 'app/mailers/application_mailer.rb'
+    add_filter 'app/controllers/application_controller.rb' # TODO: remove after application layout is used.
+    add_filter 'app/models/application_record.rb'
     minimum_coverage 100
   end
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov if ENV['ci'] == 'true'
 end
 
 require File.expand_path('../../config/environment', __FILE__)
@@ -30,4 +37,6 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include DeviseHelper
 end

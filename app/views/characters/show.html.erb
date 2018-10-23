@@ -1,0 +1,27 @@
+<div class="ui stackable centered grid">
+  <div class="five wide column">
+    <h3 class="ui center aligned header"><%= t('.header', name: @character.name) %></h3>
+    <div class="ui items">
+      <div class="ui item">
+        <div class="image">
+          <% if @character.avatar.attached? %>
+            <%= image_tag(@character.avatar) %>
+          <% end %>
+        </div>
+        <div class="content">
+          <div class="meta">
+            <p><%= t('.level') %><strong><%= @character.level %></strong></p>
+            <p><%= t('.user') %><strong><%= @character.user.username %></strong></p>
+          </div>
+          <div class="description">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% if @character.user == current_user %>
+      <%= link_to t('.edit'), edit_character_path(@character), class: 'ui fluid inverted green button' %>
+    <% end %>
+    <%= link_to t('.back'), characters_path, class: 'ui fluid basic button' %>
+  </div>
+</div>
