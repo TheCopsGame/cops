@@ -7,6 +7,7 @@ module Cops
   class Application < Rails::Application
     config.load_defaults 5.2
     config.autoload_paths << Rails.root.join('lib')
+    config.active_job.queue_adapter = :sidekiq
 
     config.time_zone = ENV.fetch('TZ', 'Brasilia')
     config.i18n.enforce_available_locales = true
