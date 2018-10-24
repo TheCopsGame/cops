@@ -7,6 +7,10 @@
 #header {
   float: right;
   width: calc(100% - 260px);
+
+  .ui.compact.message {
+    margin-bottom: 1.8em;
+  }
 }
 
 #sidebar {
