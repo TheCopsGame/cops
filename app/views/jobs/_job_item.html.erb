@@ -1,0 +1,50 @@
+<div class="ui center aligned middle aligned item grid">
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <div class="ui image">
+      <%= image_tag(job.image) %>
+    </div>
+  </div>
+
+  <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
+    <div class="content">
+      <div class="header">
+        <h2><%= job.label %></h2>
+      </div>
+
+      <!-- Cost properties -->
+      <div class="extra">
+        <i class="arrow circle down icon red"></i>
+        <div class="ui horizontal bulleted list">
+          <% job.cost_properties.each do |cost_attribute| %>
+            <div class="item">
+              <%= t("inventory.labels.#{cost_attribute}", qualifier: '-', value: job.send(cost_attribute).abs) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Gain properties -->
+      <div class="description">
+        <div class="ui horizontal list">
+          <% job.gain_properties.each do |gain_attribute| %>
+            <div class="item">
+              <i class="arrow circle up icon green"></i>
+              <%= t("inventory.labels.#{gain_attribute}", qualifier: '+', value: job.send(gain_attribute).abs) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <div class="description">
+      <%=
+        link_to t('general.actions.work'),
+                work_path(job_kind: job.name),
+                method: :post,
+                class: 'ui mini inverted green button'
+      %>
+    </div>
+  </div>
+</div>

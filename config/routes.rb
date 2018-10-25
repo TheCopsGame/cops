@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post 'purchase_snack', to: 'cafeteria#purchase_snack'
   get  'gym',            to: 'gym#index'
   post 'train',          to: 'gym#train'
+  get  'jobs',           to: 'jobs#index'
+  post 'work',           to: 'jobs#work'
 
   resources :characters
 

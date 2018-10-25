@@ -1,0 +1,4 @@
+pt-BR:
+  enum:
+    job_kind:
+      warehouse: Almoxarifado
