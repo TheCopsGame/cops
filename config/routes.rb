@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   devise_for :users
 
@@ -20,5 +22,9 @@ Rails.application.routes.draw do
     unauthenticated :user do
       root to: 'static_pages#home', as: :unauthenticated_root
     end
+  end
+
+  authenticate :user do
+    mount Sidekiq::Web => '/sidekiq'
   end
 end
