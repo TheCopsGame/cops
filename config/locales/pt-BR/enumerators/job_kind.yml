@@ -1,0 +1,6 @@
+pt-BR:
+  enum:
+    job_kind:
+      warehouse: Almoxarifado
+      paper_work: Papelada
+      patrol: Ronda pelo bairro

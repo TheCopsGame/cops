@@ -1,12 +1,16 @@
 @import 'characters-list';
 @import 'character-form';
-@import 'gym';
 @import 'user-form';
 @import 'sidebar';
+@import 'pages';
 
 #header {
   float: right;
   width: calc(100% - 260px);
+
+  .ui.compact.message {
+    margin-bottom: 1.8em;
+  }
 }
 
 #sidebar {

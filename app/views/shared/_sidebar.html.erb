@@ -21,9 +21,9 @@
   <a class="item">
     <%= t('.missions') %>
   </a>
-  <a class="item">
-    <%= t('.work') %>
-  </a>
+  <%= link_to t('.jobs'),
+              jobs_path,
+              class: "item #{'active' if controller_path == 'jobs'}" %>
   <% if current_character %>
     <div class="item">
       <%= t('.profile') %>

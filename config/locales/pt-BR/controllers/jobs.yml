@@ -1,0 +1,7 @@
+pt-BR:
+  jobs:
+    work:
+      success: "Um pouco cansativo mas pelo menos o dinheiro tá na mão"
+      invalid_params: "Alguma coisa deu errado. Por favor, tente novamente"
+      insufficient_energy: "Você não tem energia suficiente. Vá até a lanchonete e compre alguma coisa"
+      invalid_character: "Alguma coisa deu errado. Por favor, tente novamente"
