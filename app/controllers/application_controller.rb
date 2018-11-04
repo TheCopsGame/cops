@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   layout :layout_by_resource
 
   before_action :configure_permitted_parameters, if: :devise_controller?
+  after_action :check_level_progression, unless: :devise_controller?
 
   helper_method :current_character
 
@@ -35,5 +36,9 @@ class ApplicationController < ActionController::Base
   def redirect_with_message(path:, kind:, message:)
     flash[kind] = message
     redirect_to path
+  end
+
+  def check_level_progression
+    Cops::Level::ProgressionService.call(current_character)
   end
 end
