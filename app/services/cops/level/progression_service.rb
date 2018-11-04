@@ -13,7 +13,8 @@ module Cops
 
       def call
         return unless character
-        character.increment!(:level) if should_progress_level?
+        character.increment(:level) if should_progress_level?
+        character.save!
       end
 
       private
