@@ -1,15 +1,6 @@
 class CharacterLevel
   include EnumeratedTypeWithBenefits
 
-  ##
-  # Each declared character level contains the following properties:
-  #
-  # :experience, :strength, :agility, :intelligence
-  #
-  # - Negative properties will be considered as costs.
-  # - Positive properties will be considered as gains.
-  # - Nil properties will be ignored.
-
   declare :level_1,
     experience: 0,
     strength: 0,
