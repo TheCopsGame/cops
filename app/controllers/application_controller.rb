@@ -28,8 +28,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_character
-    character = current_user.character
-
+    character = current_user&.character
     @current_character ||= character&.persisted? ? character : nil
   end
 
