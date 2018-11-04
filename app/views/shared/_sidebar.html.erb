@@ -15,9 +15,9 @@
   <%= link_to t('.gym'),
               gym_path,
               class: "item #{'active' if controller_path == 'gym'}" %>
-  <a class="item">
-    <%= t('.library') %>
-  </a>
+  <%= link_to t('.library'),
+              library_path,
+              class: "item #{'active' if controller_path == 'library'}" %>
   <a class="item">
     <%= t('.missions') %>
   </a>
