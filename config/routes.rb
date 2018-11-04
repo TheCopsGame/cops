@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post 'train',          to: 'gym#train'
   get  'jobs',           to: 'jobs#index'
   post 'work',           to: 'jobs#work'
+  get  'library',        to: 'library#index'
+  post 'read',           to: 'library#read'
 
   resources :characters
 
