@@ -33,6 +33,10 @@ Style/AndOr:
 Style/Alias:
   Enabled: false
 
+Style/RescueModifier:
+  Exclude:
+    - 'app/services/cops/level/progression_service.rb'
+
 Metrics/ClassLength:
   CountComments: false
   Max: 1000
