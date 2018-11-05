@@ -1,0 +1,7 @@
+pt-BR:
+  library:
+    read:
+      success: "Demais! Você está se sentindo incrível!"
+      invalid_params: "Alguma coisa deu errado. Por favor, tente novamente"
+      insufficient_funds: "Você não tem dinheiro e/ou energia suficientes. Faça alguma missão, trabalhe um pouco ou visite a lanchonete."
+      invalid_character: "Alguma coisa deu errado. Por favor, tente novamente"
