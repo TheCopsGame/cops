@@ -13,13 +13,23 @@
 
       <!-- Cost properties -->
       <div class="extra">
-        <i class="arrow circle down icon red"></i>
-        <div class="ui horizontal bulleted list">
-          <% job.cost_properties.each do |cost_attribute| %>
+        <div>
+          <i class="angle double up icon"></i>
+          <div class="ui horizontal bulleted list">
             <div class="item">
-              <%= t("inventory.labels.#{cost_attribute}", qualifier: '-', value: job.send(cost_attribute).abs) %>
+              <%= t("inventory.labels.level", value: job.send(:level)) %>
             </div>
-          <% end %>
+          </div>
+        </div>
+        <div>
+          <i class="arrow circle down icon red"></i>
+          <div class="ui horizontal bulleted list">
+            <% job.cost_properties.each do |cost_attribute| %>
+              <div class="item">
+                <%= t("inventory.labels.#{cost_attribute}", qualifier: '-', value: job.send(cost_attribute).abs) %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
 
