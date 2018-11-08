@@ -1,6 +1,7 @@
 pt-BR:
   inventory:
     labels:
+      level: 'Nível %{value}'
       experience: '%{qualifier}%{value} de experiência'
       energy: '%{qualifier}%{value}% de energia'
       money: '%{qualifier}$%{value}'
