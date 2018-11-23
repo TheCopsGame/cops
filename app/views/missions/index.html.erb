@@ -1,0 +1,23 @@
+<div class="ui stackable centered grid">
+  <div class="ten wide column center aligned">
+    <!-- Header -->
+    <h2 class="ui icon header">
+      <i class="shield alternate icon"></i>
+      <div class="content">
+        <%= t('.header') %>
+        <div class="sub header"><%= t('.subheader') %></div>
+      </div>
+    </h2>
+
+    <!-- Content -->
+    <div class="ui center aligned inventory stackable grid">
+      <div class="sixteen wide column">
+        <div class="ui divided items">
+          <% MissionKind.each do |mission| %>
+            <%= render 'mission_item', mission: mission %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
