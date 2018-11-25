@@ -2,12 +2,31 @@ pt-BR:
   shared:
     home: Home
     sidebar:
-      shooting_range: Estande de tiro
       gym: Academia
       library: Biblioteca
       cafeteria: Lanchonete
       missions: Missões
       jobs: Trabalho
+      profile: Perfil
+      edit_character: Editar personagem
+      edit_account: Editar conta
+      logout: Sair
+      name: Nome
+      level: Nível
+      experience: Experiência
+      energy: Energia
+      money: Dinheiro
+      strength: Força
+      agility: Agilidade
+      intelligence: Inteligência
+    navbar:
+      dashboard: Início
+      gym: Academia
+      library: Biblioteca
+      cafeteria: Lanchonete
+      missions: Missões
+      jobs: Trabalho
+      character: Personagem
       profile: Perfil
       edit_character: Editar personagem
       edit_account: Editar conta

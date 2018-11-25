@@ -1,4 +1,4 @@
-.ui.left.visible.sidebar.inverted.vertical.menu {
+#sidebar {
   .item {
     margin: 0 auto;
 
@@ -41,7 +41,7 @@
 }
 
 @media (max-width: 767px) {
-  .ui.left.visible.sidebar.inverted.vertical.menu {
+  #sidebar {
     display: none;
   }
 }
