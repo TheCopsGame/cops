@@ -2,6 +2,7 @@
 @import 'character-form';
 @import 'user-form';
 @import 'sidebar';
+@import 'navbar';
 @import 'pages';
 
 #header {
@@ -17,6 +18,10 @@
   float: left;
 }
 
+#navbar {
+  display: none;
+}
+
 .ui.center.aligned.header {
   margin-top: 3em;
 }
@@ -28,5 +33,17 @@
 @media (max-width: 767px) {
   #header {
     width: 100%;
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  #navbar {
+    display: block;
+
+    .items {
+      display: none;
+    }
   }
 }
