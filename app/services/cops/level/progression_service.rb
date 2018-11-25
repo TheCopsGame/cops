@@ -12,7 +12,8 @@ module Cops
       end
 
       def call
-        return unless character
+        return unless character&.persisted?
+
         character.increment(:level) if should_progress_level?
         character.save
       end

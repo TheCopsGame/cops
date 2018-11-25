@@ -38,12 +38,10 @@ RSpec.describe 'Characters', type: :request do
   end
 
   describe 'GET #show' do
-    before do
-      create_and_login_user
-    end
+    let!(:user) { create_and_login_user }
 
     it 'returns http success' do
-      character = create(:character)
+      character = create(:character, user: user)
 
       get character_path(character)
 
