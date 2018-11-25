@@ -1,0 +1,6 @@
+pt-BR:
+  enum:
+    mission_kind:
+      help_old_woman: Ajudar velhinha
+      stop_robbery: Impedir roubo
+      rescue_hostage: Resgatar refém

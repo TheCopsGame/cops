@@ -1,0 +1,8 @@
+pt-BR:
+  enum:
+    book_kind:
+      police_manual: Manual de polícia
+      art_of_war: A arte da guerra
+      men_in_blue: Homens de farda
+      cop: COP
+      busting_bad_guys: Prendendo bandidos

@@ -14,13 +14,30 @@ RSpec.describe 'User login', type: :feature do
       user.confirm
     end
 
-    it 'logs the user in' do
-      fill_in 'user_email', with: user.email
-      fill_in 'user_password', with: user.password
+    context 'when user already has a character' do
+      let!(:character) { create(:character, user: user) }
 
-      click_button(I18n.t('devise.sessions.new.login'))
+      it 'logs the user in redirecting to dashboard' do
+        fill_in 'user_email', with: user.email
+        fill_in 'user_password', with: user.password
+        click_button(I18n.t('devise.sessions.new.login'))
 
-      expect(page).to have_content(I18n.t('devise.sessions.signed_in'))
+        expect(current_path).to eq(dashboard_path)
+      end
+    end
+
+    context "when user doesn't have a character yet" do
+      it 'logs the user in redirecting to new character path' do
+        fill_in 'user_email', with: user.email
+        fill_in 'user_password', with: user.password
+        click_button(I18n.t('devise.sessions.new.login'))
+
+        expect(current_path).to eq(new_character_path)
+
+        visit cafeteria_path
+
+        expect(current_path).to eq(new_character_path)
+      end
     end
   end
 

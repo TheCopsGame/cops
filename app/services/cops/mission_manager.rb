@@ -1,5 +1,5 @@
 module Cops
-  class JobManager < BaseManager
+  class MissionManager < BaseManager
     class InsufficientLevelError < StandardError; end
     class InsufficientEnergyError < StandardError; end
 
