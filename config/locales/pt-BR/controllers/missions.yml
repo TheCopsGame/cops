@@ -1,0 +1,8 @@
+pt-BR:
+  missions:
+    perform:
+      success: "Você salvou o dia mais uma vez!"
+      invalid_params: "Alguma coisa deu errado. Por favor, tente novamente"
+      insufficient_level: "Você não possui o nível necessário. Ganhe mais experiência para passar para o próximo nível"
+      insufficient_energy: "Você não tem energia suficiente. Vá até a lanchonete e compre alguma coisa"
+      invalid_character: "Alguma coisa deu errado. Por favor, tente novamente"

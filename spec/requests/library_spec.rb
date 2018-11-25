@@ -25,10 +25,6 @@ RSpec.describe 'Library', type: :request do
         expect { subject }.to change(character, :intelligence).by(BookKind::COP.intelligence)
       end
 
-      it 'decreases the character money' do
-        expect { subject }.to change(character, :money).by(BookKind::COP.money)
-      end
-
       it 'decreases the character energy' do
         expect { subject }.to change(character, :energy).by(BookKind::COP.energy)
       end

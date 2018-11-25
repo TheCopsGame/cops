@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post 'work',           to: 'jobs#work'
   get  'library',        to: 'library#index'
   post 'read',           to: 'library#read'
+  get  'missions',       to: 'missions#index'
+  post 'perform',        to: 'missions#perform'
 
   resources :characters
 

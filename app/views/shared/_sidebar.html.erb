@@ -2,25 +2,18 @@
   <%= link_to authenticated_root_path, class: 'item' do %>
     <%= image_tag('logo-white.png', class: 'logo') %>
   <% end %>
-
-  <%=
-    link_to t('.cafeteria'),
+  <%= link_to t('.cafeteria'),
             cafeteria_path,
-            class: "item #{'active' if controller_path == 'cafeteria'}"
-  %>
-
-  <a class="item">
-    <%= t('.shooting_range') %>
-  </a>
+            class: "item #{'active' if controller_path == 'cafeteria'}" %>
   <%= link_to t('.gym'),
               gym_path,
               class: "item #{'active' if controller_path == 'gym'}" %>
   <%= link_to t('.library'),
               library_path,
               class: "item #{'active' if controller_path == 'library'}" %>
-  <a class="item">
-    <%= t('.missions') %>
-  </a>
+  <%= link_to t('.missions'),
+              missions_path,
+              class: "item #{'active' if controller_path == 'missions'}" %>
   <%= link_to t('.jobs'),
               jobs_path,
               class: "item #{'active' if controller_path == 'jobs'}" %>
