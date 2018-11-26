@@ -1,5 +1,10 @@
 @import 'forms';
 
+#header {
+  position: relative;
+  min-height: 100%;
+}
+
 .ui.header > .logo {
   margin-top: 2em;
   margin-bottom: 0em;
